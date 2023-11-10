@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public Question5 {
+
+   public static void main(String[] args){
+
+      Scanner scanner = new Scanner(System.in);
+  String s = scanner.nextLine();
+      int lbC = 0;
+      int rbc = 0;   
+   for(int i=0; i<s.length(); i++){
+        if(s.charAt(i)==')')
+          rbc++;
+        if(s.charAt(i)=='(')
+          lbc++;
+      }
+      if(lbc!=rbc)
+         System.out.println("Invlid");
+       
+      else{
+      boolean condition = true;
+      String symbols = "-+%/*";    
+     for(int i=0; i<s.length(); i++){
+         if(symbols.contains(s.charAt(i))){
+           if(!Character.isAlpha(s.charAt(i-1))||!Character.isAlpha(s.charAt(i+1))){
+              condition = false;
+              System.out.println("Invalid");
+              break;
+            }     
+      }
+    }
+   if(condition){
+      System.out.println("Valid");
+     }  
+   
+   }
+
+}
+
+}
