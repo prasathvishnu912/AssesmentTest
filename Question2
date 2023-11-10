@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+public class Question2 {
+
+  public static void main {
+     Scanner scanner = new Scanner();
+     System.out.println("Enter the Number: ");
+     String s = scanner.nextInt()+"";
+     boolean condition = true;
+      for(int i=0; i<s.length();i++){
+        int curN = Integer.parseInt(s.charAt(i)+"");
+        int leftDiff = 0;
+        int rightDiff = 0;
+        if(i>0){
+          int leftN = Integer.parseInt(n.charAt(i-1)+"");
+          leftDiff = Math.abs(curN-leftN);
+         }
+        if(i<s.length()-1){
+          int rightN = Integer.parseInt(n.charAt(i+1)+"");
+          leftDiff = Math.abs(curN-rightN);
+         }
+        if(leftDiff>1&&rightDiff>1){
+            condition = false;
+           System.out.println(s + " is not a jumbled number");
+            break;
+      }
+     }
+     if(condition)
+     System.out.println(s + " is a jumbled number);
+
+
+
+
+}
+
+
+}
