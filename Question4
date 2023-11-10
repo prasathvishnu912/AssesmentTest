@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public Question4{
+      public static void main(String[] args){
+ 
+       Scanner scanner = new Scanner(System.in);
+       String s = scanner.nextLine();
+       int rows = scanner.nextInt();
+       int startInx = 0;
+       for(int i=1; i<=rows;i++){
+         if(i==0||i==rows){    
+            System.out.println(s.charAt(startInx));
+            int aInx = i;
+            int j=startInx+1;
+            while(j<s.length()){
+              if(j==aInx+((rows-i)+(rows/2))){
+                  System.out.println(s.charAt(j));
+                  aInx += (rows-i)+(rows/2);
+              }
+             else{
+                System.out.println(" ");
+              }
+              j++;
+           }
+         }
+         else{
+
+           }
+       }
+
+
+}
+}
